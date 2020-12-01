@@ -1,0 +1,28 @@
+.container {
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
+canvas {
+    border: 1px solid red;
+}
+
+/* .game2 {
+    border: 1px solid red;
+}
+
+.game3 {
+    border: 1px solid red;
+}
+
+.game4 {
+    border: 1px solid red;
+} */
