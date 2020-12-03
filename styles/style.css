@@ -1,28 +1,20 @@
-.container {
-    margin: auto;
-    width: 600px;
-    height: 600px;
-    border: 1px solid black;
-    padding: 1%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+ body {
+     background-color: #333333;
+     color: #ffffff;
+ }
 
-}
+ #score #speed {
+     display: inline-block;
+ }
 
+ div {
+     font-size: 25px;
+     font-weight: bold;
+     font-family: monospace;
+     text-align: center;
+ }
 
-canvas {
-    border: 1px solid red;
-}
-
-/* .game2 {
-    border: 1px solid red;
-}
-
-.game3 {
-    border: 1px solid red;
-}
-
-.game4 {
-    border: 1px solid red;
-} */
+ canvas {
+     display: block;
+     margin: 0 auto;
+ }
