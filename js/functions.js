@@ -40,3 +40,31 @@ function drop() {
 
     requestAnimationFrame(drop);
 }
+
+function CONTROL(event) {
+
+    if (!canMove) {
+        return false;
+    }
+
+    const moveFunctions = {
+        ArrowLeft() {
+            piece.moveLeft();
+            dropStart = Date.now();
+        },
+        ArrowRight() {
+            piece.moveRight();
+            dropStart = Date.now();
+        },
+        ArrowUp() {
+            piece.rotate();
+            dropStart = Date.now();
+        },
+        ArrowDown() {
+            piece.moveDown();
+        }
+    };
+
+    const movePiece = moveFunctions[event.code];
+    movePiece();
+}

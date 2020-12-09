@@ -1,6 +1,7 @@
  body {
      background-color: #333333;
      color: #ffffff;
+     overflow: visible;
  }
 
  #score #speed {
@@ -17,4 +18,9 @@
  canvas {
      display: block;
      margin: 0 auto;
+ }
+
+
+ #tetris-container {
+     display: flex;
  }
