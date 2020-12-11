@@ -1,7 +1,9 @@
  body {
      background-color: #333333;
      color: #ffffff;
-     overflow: visible;
+     overflow: hidden;
+     background-image: url(../img/backgroundTetris2.jpg);
+     background-size: 50%;
  }
 
  #score #speed {
@@ -16,11 +18,27 @@
  }
 
  canvas {
-     display: block;
-     margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     margin: 110px auto;
  }
 
+ #performance {
+     display: block;
+     position: fixed;
+     margin-left: 400px;
+     margin-top: 550px;
+ }
 
  #tetris-container {
      display: flex;
+ }
+
+ #logo {
+     height: 100px;
+     width: 300px;
+     margin: 0 auto;
+     position: fixed;
+     left: 610px;
+     top: 0;
  }

@@ -22,10 +22,10 @@ function drawSquare(y, x, color) {
 }
 
 function randomPiece() {
-    const randomPieceNumber = Math.floor(Math.random() * pieces.length);
+    const randomPieceNumber = Math.floor(Math.random() * PIECES.length);
     return new Piece(
-        pieces[randomPieceNumber][0],
-        pieces[randomPieceNumber][1],
+        PIECES[randomPieceNumber][0],
+        PIECES[randomPieceNumber][1],
     );
 }
 
@@ -67,4 +67,55 @@ function CONTROL(event) {
 
     const movePiece = moveFunctions[event.code];
     movePiece();
+}
+
+function updateRowAndScore(row) {
+    canMove = false;
+
+    for (let y = row; y > 1; y--) {
+        for (let currentCol = 0; currentCol < COL; currentCol++) {
+            removeRow(y, currentCol);
+        }
+    }
+
+    for (let currentCol = 0; currentCol < COL; currentCol++) {
+        board[0][currentCol] = defaultColor;
+    }
+
+    score += 10;
+
+    if (speed > 100) {
+        speed -= 20;
+    }
+
+    canMove = true;
+}
+
+function removeRow(rowToRemove, colToRemove) {
+    board[rowToRemove][colToRemove] = board[rowToRemove - 1][colToRemove];
+}
+
+function gameOver() {
+    let warning = confirm("Game over! Another round?");
+
+    if (warning) {
+        resetGame();
+    }
+}
+
+function resetGame() {
+    speed = 500;
+    dropStart = Date.now();
+    score = 0;
+
+    board = [];
+    for (let currentRow = 0; currentRow < ROW; currentRow++) {
+        board[currentRow] = [];
+        for (let currentCol = 0; currentCol < COL; currentCol++) {
+            board[currentRow][currentCol] = defaultColor;
+        }
+    }
+
+    piece = randomPiece();
+    drawBoard();
 }

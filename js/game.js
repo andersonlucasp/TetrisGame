@@ -7,7 +7,7 @@ const ROW = 20;
 const COL = 10;
 const SQ = 30;
 const defaultColor = "#111111";
-const defaultBorder = "rgba(255,255,255,0.1)";
+const defaultBorder = "white";
 
 let canMove = true;
 let speed = 500;
@@ -24,7 +24,7 @@ for (let currentRow = 0; currentRow < ROW; currentRow++) {
 
 drawBoard();
 
-const pieces = [
+const PIECES = [
     [Z, '#CD0000'],
     [S, '#9ACD32'],
     [T, '#473C8B'],
