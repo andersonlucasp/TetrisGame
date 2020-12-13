@@ -1,3 +1,5 @@
+let req;
+
 function drawBoard() {
     for (let currentRow = 0; currentRow < ROW; currentRow++) {
         for (let currentCol = 0; currentCol < COL; currentCol++) {
@@ -7,7 +9,7 @@ function drawBoard() {
     }
 
     scoreElement.innerHTML = score;
-    speedElement.innerHTML = speed;
+    speedElement.innerHTML = 500 - speed;
 }
 
 function drawSquare(y, x, color) {
@@ -37,8 +39,7 @@ function drop() {
         piece.moveDown();
         dropStart = Date.now();
     }
-
-    requestAnimationFrame(drop);
+    req = requestAnimationFrame(drop);
 }
 
 function CONTROL(event) {

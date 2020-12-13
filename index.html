@@ -11,18 +11,27 @@
 
 <body>
     <header>
-        <img id="logo" src="./img/logo.png">
+        <img id="logo" src="./img/logo2.png">
     </header>
+
+
 
     <section id="tetris-container">
         <canvas id="tetris" width="320" height="610"> </canvas>
         <!-- <canvas id="pingPong" width="320" height="610"> </canvas> -->
-        <div id="performance">
-            <p>Score: <span id="score"></span></p>
-            <p>Speed: <span id="speed"></span></p>
-        </div>
     </section>
-    
+
+    <div id="performance">
+        <p>Score: <span id="score"></span></p>
+        <p>Speed: <span id="speed"></span></p>
+        <audio src="Tetris-99-Main-Theme.mp3" type="audio/mpeg"></audio>
+        <button id="play"><img class="playSolid" src="./img/play-solid.svg">Play</button>
+    </div>
+
+    <div id="guide">
+        <img id="how-to-play" src="./img/HOW TO PLAY.png">
+    </div>
+
 
     <script type="text/javascript" src="js/piece.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>

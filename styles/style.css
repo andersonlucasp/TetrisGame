@@ -20,25 +20,75 @@
  canvas {
      display: flex;
      flex-direction: column;
-     margin: 110px auto;
+     margin: 10px auto;
  }
 
  #performance {
-     display: block;
+     width: 240px;
+     height: 260px;
+     display: flex;
+     flex-direction: column;
      position: fixed;
-     margin-left: 400px;
-     margin-top: 550px;
+     top: 23%;
+     margin-left: 64%;
+     font-weight: bold;
+     font-family: Lucida Sans Typewriter;
+     background-color: #3D4B55;
+ }
+
+ #play {
+     margin: auto;
+     width: 100px;
+     height: 30px;
+     text-align: center;
+     color: white;
+     background-color: #D6AA3A;
+     font-family: Lucida Sans Typewriter;
+     font-size: 18px;
+     cursor: pointer;
+ }
+
+ .playSolid {
+     width: 12px;
+     color: white;
+     margin-right: 10px;
+ }
+
+ .pauseSolid {
+     width: 12px;
+     color: white;
+     margin-right: 10px;
+ }
+
+
+ #guide {
+     display: flex;
+     position: fixed;
+     top: 23%;
+     margin-left: 19%;
+     width: 260px;
+     height: 240px;
+ }
+
+ #how-to-play {
+     width: 240px;
+     height: 260px;
  }
 
  #tetris-container {
      display: flex;
  }
 
+
+ header {
+     display: flex;
+     justify-items: center;
+     position: relative;
+     right: 18px;
+ }
+
  #logo {
      height: 100px;
      width: 300px;
      margin: 0 auto;
-     position: fixed;
-     left: 610px;
-     top: 0;
  }

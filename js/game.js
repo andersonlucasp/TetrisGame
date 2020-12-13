@@ -3,6 +3,7 @@ const ctx = cvs.getContext("2d");
 const scoreElement = document.getElementById("score");
 const speedElement = document.getElementById("speed");
 
+
 const ROW = 20;
 const COL = 10;
 const SQ = 30;
@@ -10,7 +11,7 @@ const defaultColor = "#111111";
 const defaultBorder = "white";
 
 let canMove = true;
-let speed = 500;
+let speed = 480;
 let dropStart = Date.now();
 let score = 0;
 
@@ -36,6 +37,26 @@ const PIECES = [
 
 let piece = randomPiece();
 
-drop();
-
 document.addEventListener("keydown", CONTROL);
+
+const button = document.getElementById('play');
+
+button.addEventListener('click', function () {
+    const audio = document.querySelector('audio');
+    audio.play();
+    drop();
+
+    if (button.innerText == 'Play') {
+        button.innerText = 'Pause';
+        button.innerHTML = '<img src="./img/pause-solid.svg"" class="pauseSolid"/>Pause';
+    }
+
+    if (button.innerText == 'Pause') {
+        button.addEventListener('click', function () {
+            audio.pause();
+            button.innerText = 'Play';
+            button.innerHTML = '<img src="./img/play-solid.svg"" class="playSolid"/>Play';
+            cancelAnimationFrame(req);
+        })
+    }
+});

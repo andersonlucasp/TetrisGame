@@ -111,9 +111,11 @@ class Piece {
                     continue;
                 }
 
-                if (this.y + currentRow < 0) {
+                if (this.y + currentRow <= 0) {
+                    console.log('entrou', this.y)
                     gameOver();
                     break;
+
                 }
 
                 board[this.y + currentRow][this.x + currentCol] = this.color;
