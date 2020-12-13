@@ -44,19 +44,15 @@ const button = document.getElementById('play');
 button.addEventListener('click', function () {
     const audio = document.querySelector('audio');
     audio.play();
-    drop();
 
     if (button.innerText == 'Play') {
         button.innerText = 'Pause';
         button.innerHTML = '<img src="./img/pause-solid.svg"" class="pauseSolid"/>Pause';
-    }
-
-    if (button.innerText == 'Pause') {
-        button.addEventListener('click', function () {
-            audio.pause();
-            button.innerText = 'Play';
-            button.innerHTML = '<img src="./img/play-solid.svg"" class="playSolid"/>Play';
-            cancelAnimationFrame(req);
-        })
+        drop();
+    } else if (button.innerText == 'Pause') {
+        audio.pause();
+        button.innerText = 'Play';
+        button.innerHTML = '<img src="./img/play-solid.svg"" class="playSolid"/>Play';
+        cancelAnimationFrame(req);
     }
 });

@@ -113,8 +113,8 @@ class Piece {
 
                 if (this.y + currentRow <= 0) {
                     console.log('entrou', this.y)
-                    gameOver();
-                    break;
+                    canMove = true;
+                    return gameOver();
 
                 }
 
@@ -140,7 +140,5 @@ class Piece {
         canMove = true;
     }
 
-    //test git
-    //test do test do git
 
 }
