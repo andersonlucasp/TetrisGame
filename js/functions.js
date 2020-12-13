@@ -105,7 +105,7 @@ function gameOver() {
 }
 
 function resetGame() {
-    speed = 500;
+    speed = 480;
     dropStart = Date.now();
     score = 0;
 
