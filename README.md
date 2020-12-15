@@ -1,6 +1,6 @@
 # Tetris Game
 
-![capa github](https://github.com/andersonlucasp/andersonlucasp/blob/main/images/Capa_github.png)  
+![capa github](https://github.com/andersonlucasp/TetrisGame/tree/main/img/logoReadme.png)  
 
 ## Introduction
 
