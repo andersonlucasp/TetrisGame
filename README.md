@@ -2,7 +2,7 @@
 
 ![capa github](https://github.com/andersonlucasp/andersonlucasp/blob/main/images/Capa_github.png)  
 
-![Multitask Game](preview.png)
+## Introduction
 
 My personal game (website base) about Tetris.<br>
 You must play Tetris to try to get the highest score to show your friends how skilled you are.
